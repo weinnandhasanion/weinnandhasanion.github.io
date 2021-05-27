@@ -284,6 +284,10 @@ section#about div#skills {
           align-items: center;
 }
 
+section#about div#skills canvas {
+  z-index: 9 !important;
+}
+
 section#about div#skills .card {
   padding: 50px;
   color: white;

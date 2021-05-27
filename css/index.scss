@@ -230,6 +230,10 @@ section#about {
     justify-content: center;
     align-items: center;
 
+    canvas {
+      z-index: 9 !important;
+    }
+
     .card {
       padding: 50px;
       color: white;
