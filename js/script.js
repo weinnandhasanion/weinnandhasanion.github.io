@@ -13,7 +13,7 @@ particlesJS.load('container', './js/particles3.json', function () {
 
 setTimeout(() => {
   $("body, html").css("overflow-y", "auto");
-}, 0);
+}, 3000);
 
 const viewSkillMap = (e) => {
   e.style.display = 'none';
