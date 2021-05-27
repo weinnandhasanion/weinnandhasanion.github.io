@@ -12,7 +12,7 @@ particlesJS.load('container', './js/particles3.json', function () {
 });
 
 setTimeout(() => {
-  $("body").css("overflow-y", "auto");
+  $("body, html").css("overflow-y", "scroll");
 }, 3000);
 
 const viewSkillMap = (e) => {
@@ -87,8 +87,6 @@ $('html, body').on('scroll', function() {
   let skillsRect = document.querySelector('#about').getBoundingClientRect();
   let resumeRect = document.querySelector('#education').getBoundingClientRect();
   let contactRect = document.querySelector('#contact').getBoundingClientRect();
-
-  console.log(helloRect);
   
   if(skillsRect.y > 0 || helloRect.y == 0) {
     $(".list-items").removeClass("active");
