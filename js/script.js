@@ -12,8 +12,8 @@ particlesJS.load('container', './js/particles3.json', function () {
 });
 
 setTimeout(() => {
-  $("body").css("overflow-y", "auto");
-}, 0);
+  $("body").css("overflow-y", "scroll");
+}, 3000);
 
 const viewSkillMap = (e) => {
   e.style.display = 'none';
