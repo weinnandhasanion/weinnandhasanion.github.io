@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weinnand Hasanion</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./css/index.css">
+  </head>
+  <body>
+    <main id="hello">
+      <nav class="navbar">
+        <div class="nav-list animate__animated animate__fadeInDown animate__delay-2s">
+          <ul>
+            <li>
+              <a class="list-items active" id="list-hello" href="#hello">Hello</a>
+            </li>
+            <li>
+              <a class="list-items" id="list-skills" href="#about">Skills</a>
+            </li>
+            <li>
+              <a class="list-items" id="list-resume" href="#education">Resume</a>
+            </li>
+            <li>
+              <a class="list-items" id="list-contact" href="#contact">Contact</a>
+            </li>
+            <li>
+              <a href="https://github.com/weinnandhasanion?tab=repositories" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="landing">
+        <div class="left">
+          <div class="title-cont">
+            <span class="animate__animated animate__faster animate__fadeInUp">Hello.</span>
+            <span class="animate__animated animate__fast animate__fadeInUp animate__delay-1s">I'm <span class="name">Weinnand</span>,</span>
+            <span class="animate__animated animate__fadeInUp animate__delay-2s">web developer.</span>
+          </div>
+        </div>
+        <div class="right" id="particles-div">
+
+        </div>
+      </div>
+    </main>
+    <section id="about">
+      <div id="info">
+        <div class="card">
+          <p style="font-weight: lighter"><span style="font-weight: 700;" id="entry-1">Hi, I am <span class="t-third">Weinnand Hasanion</span></span>. 
+            <br />
+            <br />
+            <span id="entry-2">
+              I am 21 years old and I am from the Philippines. I am very eager and willing to learn new things
+              as modern technology continues to progress. 
+            </span>
+            <br />
+            <br />
+            <span id="entry-3"> I am experienced in developing static websites
+              using only <span class="t-third">HTML</span>, <span class="t-third">CSS</span>, and some <span class="t-third">Javascript</span> using libraries such as <i>jQuery</i> or <i>React</i>.
+            </span>
+            <br />
+            <br />
+            <span id="entry-3">
+              I also have experience in developing web-based applications using <span class="t-third">PHP</span>
+              and <span class="t-third">MySQL</span> for database design and management.
+            </span>
+            <br />
+            <br />
+            <span>
+              I love coding and I aspire to be the best software
+              engineer one could become. Other skills include:
+              <br />
+              <span class="badge">
+                Bootstrap
+              </span>
+              <span class="badge">
+                materialize
+              </span>
+              <span class="badge">
+                tailwindcss
+              </span>
+              <span class="badge">
+                scss
+              </span>
+              <span class="badge">
+                react
+              </span>
+              <span class="badge">
+                jquery
+              </span>
+              <span class="badge">
+                c
+              </span>
+              <span class="badge">
+                python
+              </span>
+              <span class="badge">
+                dart
+              </span>
+              <span class="badge">
+                flutter
+              </span>
+              <span class="badge">
+                nosql
+              </span>
+              <span class="badge">
+                git
+              </span>
+              <span class="badge">
+                ui/ux design
+              </span>
+              <span class="badge">
+                wireframing
+              </span>
+            </span>
+          </p>
+        </div>
+      </div>
+      <div id="skills">
+        <div class="card">
+          <small class="animate__animated animate__bounce animate__infinite" onmouseover="viewSkillMap(this)" style="font-weight: 400;">Hover to view skill map</small>
+          <h2 id="skilltext" style="display: none">Skills</h2>
+          <canvas id="skillMap" style="display: none; transition: .5s"></canvas>
+        </div>
+      </div>
+    </section>
+    <section id="education">
+      <div class="card">
+        <div class="card-title">
+          <h3>Education</h3>
+        </div>
+        <hr style="width: 100%" />
+        <table class="table">
+          <tr>
+            <td><h2 class="t-fourth">University of San Carlos</h2></td>
+            <td>
+              <h2>Bachelor of Science in Information and Communications Technology</h2>
+              <h3>June 2016 - present</h3>
+              <h2>Bachelor of Science in Computer Science</h2>
+              <h3>June 2015 - May 2016</h3>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <td><h2 class="t-fourth">Mandaue Christian School</h2></td>
+            <td>
+              <h2>High School Graduate</h2>
+              <h3>June 2011 - March 2015</h3>
+            </td>
+          </tr>
+        </table>
+        <br />
+        <br />
+        <div class="card-title">
+          <h3>Work Experience</h3>
+        </div>
+        <hr style="width: 100%" />
+        <table class="table">
+          <tr>
+            <td><h2 class="t-fourth">Kredo IT Abroad Inc.</h2></td>
+            <td>
+              <h2>IT Intern</h2>
+              <h3>
+                &#8226; Developed static web-based applications using Javascript <br />
+                &#8226; Created raffle system for company Christmas party using HTML, CSS, and Javascript <br />
+                &#8226; Contributed to company hiring task via LinkedIn
+              </h3>
+              <h3>Dec 2019 - Nov 2020</h3>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <br>
+            </td>
+          </tr>
+          <tr>
+            <td><h2 class="t-fourth">UniversalTech Inc.</h2></td>
+            <td>
+              <h2>On-The-Job Trainee</h2>
+              <h3>
+                &#8226; Edited existing blogsites via WordPress <br />
+                &#8226; Improved SEO performance for existing blogsites<br />
+                &#8226; Created front-end for employee attendance tracking system using HTML, CSS, and Javascript (jQuery)
+              </h3>
+              <h3>Aug 2019 - Nov 2019</h3>
+            </td>
+          </tr>
+        </table>
+        <br />
+        <br />
+        <button id="resume">
+          View my resume here
+        </button>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container">
+        <div id="container"></div>
+        <img src="./img/pic.png" alt="Weinnand">
+        <div id="info-cont">
+          <h2>Weinnand Ondre A. Hasanion</h2>
+          <hr />
+          <div>
+            <span><i class="fa fa-map-marker-alt"></i></span>
+            <span class="pr-2"><h3>Cebu, Philippines</h3></span>
+            <span><i class="fa fa-phone-alt"></i></span>
+            <span class="pr-2"><h3>09206013530</h3></span>
+            <span><i class="fa fa-envelope"></i></span>
+            <span class="pr-2"><h3>weinnandhasanion@gmail.com</h3></span>
+          </div>
+          <h3>Find me on:</h3>
+          <div class="socmed">
+            <i id="facebook" class="fa fa-facebook-f"></i>
+            <i id="twitter" class="fa fa-twitter"></i>
+            <i id="insta" class="fa fa-instagram"></i>
+            <i id="linkedin" class="fab fa-linkedin-in"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a06f703f0a.js" crossorigin="anonymous"></script>
+    <script src="./js/particles.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
