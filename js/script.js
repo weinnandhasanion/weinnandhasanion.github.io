@@ -1,65 +1,53 @@
 
-particlesJS.load('particles-div', './js/particles.json', function () {
-  console.log('callback - particles.js config loaded');
-});
+particlesJS.load('particles-div', './js/particles.json');
 
-particlesJS.load('info', './js/particles2.json', function () {
-  console.log('callback - particles.js config loaded');
-});
+particlesJS.load('info', './js/particles2.json');
 
-particlesJS.load('container', './js/particles3.json', function () {
-  console.log('callback - particles.js config loaded');
-});
+particlesJS.load('container', './js/particles3.json');
 
 setTimeout(() => {
   $("body, html").css("overflow-y", "auto");
 }, 3000);
 
-const viewSkillMap = (e) => {
-  e.style.display = 'none';
-  $("#skilltext").css("display", "block").addClass("animate__animated animate__fadeInUp");
-  $("#skillMap").css("display", "block").addClass("animate__animated animate__fadeIn");
-
-  const ctx = document.getElementById('skillMap');
-  const myChart = new Chart(ctx, {
-    type: 'radar',
-    data: {
-      labels: ['HTML', 'CSS', 'PHP', 'Javascript', 'MySQL'],
-      datasets: [{
-        data: [9, 8, 6, 7, 6],
-        fill: true,
-        backgroundColor: 'rgba(255, 101, 47, .5)',
-        borderColor: '#ff652f',
-        pointBorderColor: '#ff652f',
-        borderWidth: 2
-      }]
+const ctx = document.getElementById('skillMap');
+const myChart = new Chart(ctx, {
+  type: 'radar',
+  data: {
+    labels: ['HTML', 'CSS', 'PHP', 'Javascript', 'MySQL'],
+    datasets: [{
+      data: [9, 8, 6, 7, 6],
+      fill: true,
+      backgroundColor: 'rgba(255, 101, 47, .5)',
+      borderColor: '#ff652f',
+      pointBorderColor: '#ff652f',
+      borderWidth: 2
+    }]
+  },
+  options: {
+    plugins: {
+      legend: false
     },
-    options: {
-      plugins: {
-        legend: false
+    elements: {
+      line: {
+        borderWidth: 3
       },
-      elements: {
-        line: {
-          borderWidth: 3
+    },
+    scales: {
+      r: {
+        pointLabels: {
+          color: 'white'
         },
+        beginAtZero: true,
+        angleLines: {
+          color: 'white'
+        },
+        grid: {
+          color: 'white'
+        }
       },
-      scales: {
-        r: {
-          pointLabels: {
-            color: 'white'
-          },
-          beginAtZero: true,
-          angleLines: {
-            color: 'white'
-          },
-          grid: {
-            color: 'white'
-          }
-        },
-      }
     }
-  });
-}
+  }
+});
 
 $(".list-items").click(function (e) {
   let selected = $(this);
