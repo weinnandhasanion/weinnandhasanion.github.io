@@ -12,7 +12,7 @@ particlesJS.load('container', './js/particles3.json', function () {
 });
 
 setTimeout(() => {
-  $("body").css("overflow-y", "scroll");
+  $("body").css("overflow-y", "auto");
 }, 3000);
 
 const viewSkillMap = (e) => {
