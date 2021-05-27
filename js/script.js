@@ -12,8 +12,8 @@ particlesJS.load('container', './js/particles3.json', function () {
 });
 
 setTimeout(() => {
-  $("body, html").css("overflow-y", "scroll");
-}, 3000);
+  $("body, html").css("overflow-y", "auto");
+}, 0);
 
 const viewSkillMap = (e) => {
   e.style.display = 'none';
@@ -63,7 +63,7 @@ const viewSkillMap = (e) => {
 
 $(".list-items").click(function (e) {
   let selected = $(this);
-  let id = selected.attr("href");
+  $("#close-menu").click();
 
   if (!selected.hasClass("active")) {
     $(".list-items").removeClass("active");
@@ -131,4 +131,16 @@ $("#insta").click(function () {
 
 $("#linkedin").click(function () {
   window.open("https://www.linkedin.com/in/weinnandhasanion/", "_blank");
+});
+
+$("#open-menu").click(function() {
+  $("#list-div").removeClass("animate__slideOutUp").addClass("animate__slideInDown");
+  $("#list-div").css("display", "block");
+});
+
+$("#close-menu").click(function() {
+  $("#list-div").removeClass("animate__slideOutUp").addClass("animate__slideOutUp");
+  setTimeout(() => {
+    $("#list-div").css("display", "none");
+  }, 500);
 });

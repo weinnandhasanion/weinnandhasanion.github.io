@@ -1,4 +1,5 @@
 body, html {
+  background: black;
   height: 100%;
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -85,6 +86,74 @@ main {
           filter: brightness(70%);
 }
 
+.navbar .menu-bars {
+  position: relative;
+  display: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  color: white;
+  padding: 15px 25px 15px 25px;
+  text-align: center;
+}
+
+.navbar .menu-bars i {
+  font-size: 24px;
+}
+
+.list-div {
+  display: none;
+  position: fixed;
+  background-color: red;
+  width: 100%;
+  color: black;
+  z-index: 10;
+  border-bottom: 1px solid white;
+  background: black;
+}
+
+.list-div .close-bar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  color: white;
+  padding: 15px 25px 15px 25px;
+  text-align: center;
+}
+
+.list-div .close-bar i {
+  font-size: 24px;
+}
+
+.list-div ul {
+  margin: 0;
+  padding: 0 20px 20px 20px;
+}
+
+.list-div li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.list-div a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.list-div a:hover {
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
+}
+
 .landing {
   height: 100%;
   width: 100%;
@@ -160,6 +229,7 @@ section#about {
   height: 100%;
   width: 100vw;
   background-color: black;
+  padding: 25px;
 }
 
 section#about div#info {
@@ -392,7 +462,7 @@ section#contact .container div#info-cont {
 }
 
 section#contact .container div#info-cont h2 {
-  font-size: 2rem;
+  font-size: 2.3rem;
 }
 
 section#contact .container div#info-cont h3 {
@@ -408,11 +478,20 @@ section#contact .container div#info-cont div {
           align-items: center;
 }
 
-section#contact .container div#info-cont div span {
+section#contact .container div#info-cont div .info-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#contact .container div#info-cont div .info-detail span {
   padding: 2px;
 }
 
-section#contact .container div#info-cont div .pr-2 {
+section#contact .container div#info-cont div .info-detail .pr-2 {
   padding-right: 8px;
 }
 
@@ -464,5 +543,114 @@ section#contact .container div.socmed #linkedin:hover {
 
 .t-fourth {
   color: #66fcf1;
+}
+
+@media only screen and (max-width: 1024px) {
+  main .navbar {
+    width: 100vw;
+  }
+  main .navbar .nav-list {
+    display: none;
+  }
+  main .navbar .menu-bars {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .landing {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    position: relative;
+  }
+  main .landing .title-cont {
+    width: 400px !important;
+  }
+  main .landing .left {
+    width: 100%;
+    padding: 25px;
+  }
+  main .landing .left span {
+    font-size: 2.5rem !important;
+  }
+  main .landing .right {
+    position: absolute;
+    width: 100%;
+  }
+  section#about {
+    padding: 0 !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    height: auto !important;
+    padding-bottom: 50px !important;
+  }
+  section#about div#info {
+    width: 100%;
+  }
+  section#about div#info .card {
+    position: static;
+    width: 80vw;
+  }
+  section#about div#info canvas {
+    display: none;
+  }
+  section#about div#skills {
+    width: 100%;
+  }
+  section#about div#skills .card {
+    height: 200px;
+    width: 200px;
+  }
+  section#education .card h3.work-desc {
+    display: none;
+  }
+  section#education .card h3 {
+    font-size: 2.3rem;
+  }
+  section#education .card .table td:first-child {
+    width: auto;
+  }
+  section#education .card .table h2 {
+    font-size: 1.3rem;
+  }
+  section#education .card .table h3 {
+    font-size: .9rem;
+  }
+  section#contact {
+    margin: 0;
+  }
+  section#contact .container {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  section#contact .container div#info-cont div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section#contact .container div#info-cont div .info-detail {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  section#contact .container div#info-cont h2 {
+    font-size: 1.5rem !important;
+  }
+  section#contact .container div#info-cont div.socmed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 /*# sourceMappingURL=index.css.map */

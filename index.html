@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weinnand Hasanion</title>
+    <title>Weinnand Hasanion | Web Developer.</title>
+    <link rel="icon" href="./img/pic.png">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -35,7 +36,35 @@
             </li>
           </ul>
         </div>
+        <span class="menu-bars animate__animated animate__fadeInDown animate__delay-2s">
+          <i class="fas fa-bars" id="open-menu"></i>
+          <a href="https://github.com/weinnandhasanion?tab=repositories" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </span>
       </nav>
+      <div class="list-div animate__animated animate__faster" id="list-div">
+        <span class="close-bar">
+          <i class="fas fa-times" id="close-menu"></i>
+          <a href="https://github.com/weinnandhasanion?tab=repositories" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </span>
+        <ul>
+          <li>
+            <a class="list-items active" id="list-hello" href="#hello">Hello</a>
+          </li>
+          <li>
+            <a class="list-items" id="list-skills" href="#about">Skills</a>
+          </li>
+          <li>
+            <a class="list-items" id="list-resume" href="#education">Resume</a>
+          </li>
+          <li>
+            <a class="list-items" id="list-contact" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
       <div class="landing">
         <div class="left">
           <div class="title-cont">
@@ -170,7 +199,7 @@
             <td><h2 class="t-fourth">Kredo IT Abroad Inc.</h2></td>
             <td>
               <h2>IT Intern</h2>
-              <h3>
+              <h3 class="work-desc">
                 &#8226; Developed static web-based applications using Javascript <br />
                 &#8226; Created raffle system for company Christmas party using HTML, CSS, and Javascript <br />
                 &#8226; Contributed to company hiring task via LinkedIn
@@ -187,7 +216,7 @@
             <td><h2 class="t-fourth">UniversalTech Inc.</h2></td>
             <td>
               <h2>On-The-Job Trainee</h2>
-              <h3>
+              <h3 class="work-desc">
                 &#8226; Edited existing blogsites via WordPress <br />
                 &#8226; Improved SEO performance for existing blogsites<br />
                 &#8226; Created front-end for employee attendance tracking system using HTML, CSS, and Javascript (jQuery)
@@ -211,12 +240,18 @@
           <h2>Weinnand Ondre A. Hasanion</h2>
           <hr />
           <div>
-            <span><i class="fa fa-map-marker-alt"></i></span>
-            <span class="pr-2"><h3>Cebu, Philippines</h3></span>
-            <span><i class="fa fa-phone-alt"></i></span>
-            <span class="pr-2"><h3>09206013530</h3></span>
-            <span><i class="fa fa-envelope"></i></span>
-            <span class="pr-2"><h3>weinnandhasanion@gmail.com</h3></span>
+            <div class="info-detail">
+              <span><i class="fa fa-map-marker-alt"></i></span>
+              <span class="pr-2"><h3>Cebu, Philippines</h3></span>
+            </div>
+            <div class="info-detail">
+              <span><i class="fa fa-phone-alt"></i></span>
+              <span class="pr-2"><h3>09206013530</h3></span>
+            </div>
+            <div class="info-detail">
+              <span><i class="fa fa-envelope"></i></span>
+              <span class="pr-2"><h3>weinnandhasanion@gmail.com</h3></span>
+            </div>
           </div>
           <h3>Find me on:</h3>
           <div class="socmed">

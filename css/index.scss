@@ -4,6 +4,7 @@ $tertiary: #ff652f;
 $fourth: #66fcf1;
 
 body, html {
+  background: black;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
@@ -59,6 +60,67 @@ main {
 
   .active {
     color: $secondary;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    transition: .2s;
+
+    &:hover {
+      filter: brightness(70%);
+    }
+  }
+
+  .menu-bars {
+    position: relative;
+    display: none;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+    padding: 15px 25px 15px 25px;
+    text-align: center;
+
+    i {
+      font-size: 24px;
+    }
+  }
+}
+
+.list-div {
+  display: none;
+  position: fixed;
+  background-color: red;
+  width: 100%;
+  color: black;
+  z-index: 10;
+  border-bottom: 1px solid white;
+  background: rgba(0, 0, 0, 1);
+
+  .close-bar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+    padding: 15px 25px 15px 25px;
+    text-align: center;
+
+
+    i {
+      font-size: 24px;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0 20px 20px 20px;
+  }
+
+  li {
+    list-style-type: none;
+    padding: 10px;
   }
 
   a {
@@ -127,6 +189,7 @@ section#about {
   height: 100%;
   width: 100vw;
   background-color: $primary;
+  padding: 25px;
 
   div#info {
     position: relative;
@@ -306,7 +369,7 @@ section#contact {
       z-index: 2;
 
       h2 {
-        font-size: 2rem;
+        font-size: 2.3rem;
       }
 
       h3 {
@@ -317,12 +380,17 @@ section#contact {
         display: flex;
         align-items: center;
 
-        span {
-          padding: 2px;
-        }
+        .info-detail {
+          display: flex;
+          align-items: center;
 
-        .pr-2 {
-          padding-right: 8px;
+          span {
+            padding: 2px;
+          }
+  
+          .pr-2 {
+            padding-right: 8px;
+          }
         }
       }
     }
@@ -378,4 +446,126 @@ section#contact {
 
 .t-fourth {
   color: $fourth;
+}
+
+@media only screen and (max-width: 1024px) {
+  main {
+    .navbar {
+      width: 100vw;
+
+      .nav-list {
+        display: none;
+      }
+
+      .menu-bars {
+        display: flex;
+      }
+    }
+
+    .landing {
+      display: flex !important;
+      flex-direction: column !important;
+      position: relative;
+
+      .title-cont {
+        width: 400px !important;
+      }
+
+      .left {
+        width: 100%;
+        padding: 25px;
+
+        span {
+          font-size: 2.5rem !important;
+        }
+      }
+
+      .right {
+        position: absolute;
+        width: 100%;
+      }
+    }
+  }
+
+  section#about { 
+    padding: 0 !important;
+    flex-direction: column !important;
+    height: auto !important;
+    padding-bottom: 50px !important;
+
+    div#info {
+      width: 100%;
+
+      .card {
+        position: static;
+        width: 80vw;
+      }
+
+      canvas {
+        display: none;
+      }
+    }
+
+    div#skills {
+      width: 100%;
+
+      .card {
+        height: 200px;
+        width: 200px;
+      }
+    }
+  }
+
+  section#education {
+    .card {
+      h3.work-desc {
+        display: none;
+      }
+
+      h3 {
+        font-size: 2.3rem;
+      }
+
+      .table {
+        td {
+          &:first-child {
+            width: auto;
+          }
+        }
+
+        h2 {
+          font-size: 1.3rem;
+        }
+
+        h3 {
+          font-size: .9rem;
+        }
+      }
+    }
+  }
+
+  section#contact {
+    margin: 0;
+    .container {
+      flex-direction: column !important;
+
+      div#info-cont {
+        div {
+          flex-direction: column;
+
+          .info-detail {
+            flex-direction: row;
+          }
+        }
+
+        h2 {
+          font-size: 1.5rem !important;
+        }
+
+        div.socmed {
+          flex-direction: row;
+        }
+      }
+    }
+  }
 }
