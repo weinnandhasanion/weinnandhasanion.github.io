@@ -1,52 +1,49 @@
+particlesJS.load("particles-div", "./js/particles.json");
 
-particlesJS.load('particles-div', './js/particles.json');
+particlesJS.load("info", "./js/particles2.json");
 
-particlesJS.load('info', './js/particles2.json');
+particlesJS.load("container", "./js/particles3.json");
 
-particlesJS.load('container', './js/particles3.json');
-
-setTimeout(() => {
-  $("body, html").css("overflow-y", "auto");
-}, 3000);
-
-const ctx = document.getElementById('skillMap');
+const ctx = document.getElementById("skillMap");
 const myChart = new Chart(ctx, {
-  type: 'radar',
+  type: "radar",
   data: {
-    labels: ['HTML', 'CSS', 'PHP', 'Javascript', 'MySQL'],
-    datasets: [{
-      data: [9, 8, 6, 7, 6],
-      fill: true,
-      backgroundColor: 'rgba(255, 101, 47, .5)',
-      borderColor: '#ff652f',
-      pointBorderColor: '#ff652f',
-      borderWidth: 2
-    }]
+    labels: ["HTML", "CSS", "PHP", "Javascript", "MySQL"],
+    datasets: [
+      {
+        data: [9, 8, 6, 7, 6],
+        fill: true,
+        backgroundColor: "rgba(255, 101, 47, .5)",
+        borderColor: "#ff652f",
+        pointBorderColor: "#ff652f",
+        borderWidth: 2,
+      },
+    ],
   },
   options: {
     plugins: {
-      legend: false
+      legend: false,
     },
     elements: {
       line: {
-        borderWidth: 3
+        borderWidth: 3,
       },
     },
     scales: {
       r: {
         pointLabels: {
-          color: 'white'
+          color: "white",
         },
         beginAtZero: true,
         angleLines: {
-          color: 'white'
+          color: "white",
         },
         grid: {
-          color: 'white'
-        }
+          color: "white",
+        },
       },
-    }
-  }
+    },
+  },
 });
 
 $(".list-items").click(function (e) {
@@ -70,34 +67,34 @@ $(".list-items").click(function (e) {
   }
 });
 
-$('html, body').on('scroll', function() {
-  let helloRect = document.querySelector('#hello').getBoundingClientRect();
-  let skillsRect = document.querySelector('#about').getBoundingClientRect();
-  let resumeRect = document.querySelector('#education').getBoundingClientRect();
-  let contactRect = document.querySelector('#contact').getBoundingClientRect();
-  
-  if(skillsRect.y > 0 || helloRect.y == 0) {
+$("html, body").on("scroll", function () {
+  let helloRect = document.querySelector("#hello").getBoundingClientRect();
+  let skillsRect = document.querySelector("#about").getBoundingClientRect();
+  let resumeRect = document.querySelector("#education").getBoundingClientRect();
+  let contactRect = document.querySelector("#contact").getBoundingClientRect();
+
+  if (skillsRect.y > 0 || helloRect.y == 0) {
     $(".list-items").removeClass("active");
     $(".list-items").css("color", "white");
-    $('#list-hello').css('color', '#14a76c');
+    $("#list-hello").css("color", "#14a76c");
   }
 
-  if(skillsRect.y <= 0) {
+  if (skillsRect.y <= 0) {
     $(".list-items").removeClass("active");
     $(".list-items").css("color", "white");
-    $('#list-skills').css('color', '#ff652f');
+    $("#list-skills").css("color", "#ff652f");
   }
 
-  if(resumeRect.y <= 0) {
+  if (resumeRect.y <= 0) {
     $(".list-items").removeClass("active");
     $(".list-items").css("color", "white");
-    $('#list-resume').css('color', '#66fcf1');
+    $("#list-resume").css("color", "#66fcf1");
   }
 
-  if(contactRect.y < window.innerHeight) {
+  if (contactRect.y < window.innerHeight) {
     $(".list-items").removeClass("active");
     $(".list-items").css("color", "white");
-    $('#list-contact').css('color', '#bc0c21');
+    $("#list-contact").css("color", "#bc0c21");
   }
 });
 
@@ -121,13 +118,17 @@ $("#linkedin").click(function () {
   window.open("https://www.linkedin.com/in/weinnandhasanion/", "_blank");
 });
 
-$("#open-menu").click(function() {
-  $("#list-div").removeClass("animate__slideOutUp").addClass("animate__slideInDown");
+$("#open-menu").click(function () {
+  $("#list-div")
+    .removeClass("animate__slideOutUp")
+    .addClass("animate__slideInDown");
   $("#list-div").css("display", "block");
 });
 
-$("#close-menu").click(function() {
-  $("#list-div").removeClass("animate__slideOutUp").addClass("animate__slideOutUp");
+$("#close-menu").click(function () {
+  $("#list-div")
+    .removeClass("animate__slideOutUp")
+    .addClass("animate__slideOutUp");
   setTimeout(() => {
     $("#list-div").css("display", "none");
   }, 500);
